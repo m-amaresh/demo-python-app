@@ -1,12 +1,12 @@
 from flask import Flask, render_template, jsonify, request
+import markdown
+import markdown.extensions.fenced_code
 
 app = Flask(__name__)
-
 
 @app.route("/home")
 def FUN_root():
     return render_template("index.html")
-
 
 @app.route("/resources")
 def FUN_resource():
